@@ -3,6 +3,14 @@
         <pattern> GREETINGS</pattern>
         <template> Hi There!</template>
     </category>
+    <category>
+        <pattern> WHAT IS LONG TERM KNOWLEDGE</pattern>
+        <template> Long-term knowledge is valid every time a programme is run.</template>
+    </category>
+    <category>
+        <pattern> WHAT IS SHORT TERM KNOWLEDGE</pattern>
+        <template> Short-term knowledge is only valid for a particular instance or run of a programme.</template>
+    </category>
 
     <!-- example comment -->
 </aiml>
