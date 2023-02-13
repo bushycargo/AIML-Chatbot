@@ -1,6 +1,9 @@
 import time
+
 import aiml
-time.clock = time.time # AIML uses time.clock but is deprecated, not the best patch but works.
+
+time.clock = time.time  # AIML uses time.clock, but it is deprecated, not the best patch but works.
+
 
 def main():
     chatbot = aiml.Kernel()
