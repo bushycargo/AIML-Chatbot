@@ -7,7 +7,8 @@ def main():
     chatbot.verbose(True)
 
     # AIML Files - Uncomment as required.
-    chatbot.learn("data/workbook2.aiml")
+    # chatbot.learn("data/workbook2.aiml")
+    # chatbot.learn("data/hello.aiml")
 
     print(f"Loaded {chatbot.numCategories()} categories.")
     print("\nType \"exit\" to quit. ")
