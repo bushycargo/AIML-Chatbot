@@ -4,6 +4,8 @@ time.clock = time.time  # AIML uses time.clock, but it is deprecated, not the be
 
 
 def main():
+
+    print(definition_api("door","noun"))
     chatbot = aiml.Kernel()
     chatbot.verbose(True)
 
@@ -29,7 +31,7 @@ def definition_api(word, type):
         for entry in data:
             for meaning in entry['meanings']:
                 part_of_speech = meaning['partOfSpeech']
-                definition = meaning['definitions']['definition']
+                definition = meaning['definitions'][0]['definition']
                 if part_of_speech == type:
                     return definition
                 else:
