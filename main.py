@@ -1,6 +1,4 @@
-import time
-
-import aiml
+import time, requests, aiml, json
 
 time.clock = time.time  # AIML uses time.clock, but it is deprecated, not the best patch but works.
 
@@ -23,6 +21,22 @@ def main():
             print(chatbot.respond(next_input))
             time.sleep(0.1)
 
+
+def definition_api(word, type):
+    response = requests.get(f"https://api.dictionaryapi.dev/api/v2/entries/en/{word}")
+    if response.status_code == 200:
+        data = response.json()
+        for entry in data:
+            for meaning in entry['meanings']:
+                part_of_speech = meaning['partOfSpeech']
+                definition = meaning['definitions']['definition']
+                if part_of_speech == type:
+                    return definition
+                else:
+                    continue
+        return None
+    else:
+        return None
 
 if __name__ == '__main__':
     main()
