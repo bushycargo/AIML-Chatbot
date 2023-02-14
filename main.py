@@ -1,4 +1,6 @@
-import time, requests, aiml, json
+import aiml
+import requests
+import time
 
 time.clock = time.time  # AIML uses time.clock, but it is deprecated, not the best patch but works.
 
