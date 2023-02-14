@@ -1,0 +1,27 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <category>
+      <pattern>TRACK ORDER REQUEST</pattern>
+      <template> OK, happy to help. Please enter your order number in the format: my order number is xxxxx</template>
+    </category>
+
+
+    <!-- Synonyms-->
+
+    <category>
+        <pattern>I WANT TO TRACK MY ORDER</pattern>
+        <template><srai>TRACK ORDER REQUEST</srai></template>
+    </category>
+    <category>
+        <pattern>UPDATE ON MY ORDER</pattern>
+        <template><srai>TRACK ORDER REQUEST</srai></template>
+    </category>
+    <category>
+        <pattern>^ WHERE IS MY ORDER ^</pattern>
+        <template><srai>TRACK ORDER REQUEST</srai></template>
+    </category>
+    <category>
+        <pattern>^ SENT MY ORDER ^</pattern>
+        <template><srai>TRACK ORDER REQUEST</srai></template>
+    </category>
+
+</aiml>

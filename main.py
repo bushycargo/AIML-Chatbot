@@ -12,6 +12,8 @@ def main():
     # AIML Files - Uncomment as required.
     # chatbot.learn("data/workbook2.aiml")
     # chatbot.learn("data/hello.aiml")
+    # chatbot.learn("data/starExample.aiml")
+    chatbot.learn("data/orders1.aiml")
 
     print(f"Loaded {chatbot.numCategories()} categories.")
     print("\nType \"exit\" to quit. ")
