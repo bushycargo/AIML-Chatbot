@@ -22,7 +22,7 @@ def main():
             time.sleep(0.1)
 
 
-def definition_api(word, type):
+def definition_api(word, word_type):
     response = requests.get(f"https://api.dictionaryapi.dev/api/v2/entries/en/{word}")
     if response.status_code == 200:
         data = response.json()
@@ -30,7 +30,7 @@ def definition_api(word, type):
             for meaning in entry['meanings']:
                 part_of_speech = meaning['partOfSpeech']
                 definition = meaning['definitions'][0]['definition']
-                if part_of_speech == type:
+                if part_of_speech == word_type:
                     return definition
                 else:
                     continue
