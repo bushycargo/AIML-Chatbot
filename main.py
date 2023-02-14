@@ -4,8 +4,6 @@ time.clock = time.time  # AIML uses time.clock, but it is deprecated, not the be
 
 
 def main():
-
-    print(definition_api("door","noun"))
     chatbot = aiml.Kernel()
     chatbot.verbose(True)
 
@@ -39,6 +37,7 @@ def definition_api(word, type):
         return None
     else:
         return None
+
 
 if __name__ == '__main__':
     main()
